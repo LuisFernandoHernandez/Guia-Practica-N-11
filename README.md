@@ -3,11 +3,16 @@
 ## Qué quité (y cómo volver a tenerlo)
 
 | Lo que quité| Cómo se recupera |
-|---|---|---|
-| `vendor/` (unos 92 MB y casi 8,900 archivos)| `composer install` |
-| `.env` | copiar `.env.example` y `php artisan key:generate` |
+|---|---|
+
+| `vendor/` (unos 92 MB y casi 8,900 archivos) | `composer install` |
+
+| `.env`  | copiar `.env.example` y `php artisan key:generate` |
+
 | `database/database.sqlite` | `php artisan migrate --seed` la vuelve a crear |
+
 | `storage/framework/views/*.php` | Laravel las regenera al abrir las páginas |
+
 | `bootstrap/cache/services.php` y `packages.php` | `composer install` las regenera |
 
 No venía incluida la carpeta `node_modules/`, y no hace falta: las vistas usan CSS dentro del layout.
